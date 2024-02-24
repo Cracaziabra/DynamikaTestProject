@@ -12,3 +12,8 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     show-sql: true
+springdoc:
+  swagger-ui:
+    path: /dynamika
+  api-docs:
+    path: /swagger-dynamika-api-docs

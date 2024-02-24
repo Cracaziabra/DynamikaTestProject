@@ -5,12 +5,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Table(name = "clients")
+@Entity
 public class Client {
 
     @Id
@@ -24,6 +26,6 @@ public class Client {
     @Column(name = "patronymic")
     private String patronymic;
     @Column(name = "birthday")
-    private Date birthday;
+    private LocalDate birthday;
 
 }

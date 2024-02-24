@@ -5,12 +5,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Table(name = "borrows")
+@Entity
 public class Borrow {
 
     @Id
@@ -22,6 +24,6 @@ public class Borrow {
     @Column(name = "client_id")
     private long clientId;
     @Column(name = "start_time")
-    private Date startTime;
+    private LocalDateTime startTime;
 
 }

@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @Table(name = "books")
+@Entity
 public class Book {
 
     @Id
@@ -21,5 +22,5 @@ public class Book {
     @Column(name = "author")
     private String author;
     @Column(name = "isbn")
-    private String ISBN;
+    private String isbn;
 }

@@ -7,9 +7,6 @@ databaseChangeLog:
             tableName: borrows
             columns:
               - column:
-                  name: id
-                  value: 1
-              - column:
                   name: book_id
                   value: 1
               - column:
@@ -21,9 +18,6 @@ databaseChangeLog:
         - insert:
             tableName: borrows
             columns:
-              - column:
-                  name: id
-                  value: 2
               - column:
                   name: book_id
                   value: 2

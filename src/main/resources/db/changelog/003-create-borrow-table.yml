@@ -33,3 +33,6 @@ databaseChangeLog:
                   type: date
                   constraints:
                     nullable: false
+        - addAutoIncrement:
+            tableName: borrows
+            columnName: id

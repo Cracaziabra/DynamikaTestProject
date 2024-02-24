@@ -26,3 +26,6 @@ databaseChangeLog:
               - column:
                   name: birthday
                   type: date
+        - addAutoIncrement:
+            tableName: clients
+            columnName: id
