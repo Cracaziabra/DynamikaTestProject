@@ -2,6 +2,7 @@ package org.example.services.borrowservice;
 
 import lombok.RequiredArgsConstructor;
 import org.example.core.Borrow;
+import org.example.dtos.BorrowInfoDto;
 import org.example.dtos.CreateBorrowDto;
 import org.example.exceptions.BookAlreadyBorrowedException;
 import org.example.exceptions.BookWasntBorrowedException;
@@ -42,5 +43,10 @@ public class BorrowServiceImpl implements BorrowService {
             throw new BookWasntBorrowedException();
         }
         borrowRepository.deleteByBookIdAndClientId(borrowDto.getBookId(), borrowDto.getClientId());
+    }
+
+    @Override
+    public List<BorrowInfoDto> getAllBorrowsInfo() {
+        return borrowRepository.getAllBorrowsInfo();
     }
 }

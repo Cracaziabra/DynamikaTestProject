@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.example.dtos.BorrowDto;
+import org.example.dtos.BorrowInfoDto;
 import org.example.dtos.CreateBorrowDto;
 import org.example.dtos.ExceptionDto;
 import org.example.mappers.BorrowMapper;
@@ -77,6 +78,20 @@ public class BorrowController {
         borrowService.closeBorrow(createBorrowDto);
 
         return ResponseEntity.noContent().build();
+    }
+
+    @Operation(
+            summary = "Детальная информация о всех взявших книги",
+            description = "ФИО, день рождения читателя, название книги, имя автора, ISBN, время получения"
+    )
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", content = {
+                    @Content(schema =
+                    @Schema(implementation = BorrowInfoDto.class), mediaType = "application/json") })
+    })
+    @GetMapping(path = "/info")
+    public ResponseEntity<List<BorrowInfoDto>> getDetailedBorrows() {
+        return ResponseEntity.ok(borrowService.getAllBorrowsInfo());
     }
 
 }

@@ -1,6 +1,7 @@
 package org.example.services.borrowservice;
 
 import org.example.core.Borrow;
+import org.example.dtos.BorrowInfoDto;
 import org.example.dtos.CreateBorrowDto;
 
 import java.util.List;
@@ -13,4 +14,5 @@ public interface BorrowService {
 
     void closeBorrow(CreateBorrowDto borrowDto);
 
+    List<BorrowInfoDto> getAllBorrowsInfo();
 }
