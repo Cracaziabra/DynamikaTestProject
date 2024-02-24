@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-init-test-clients
+      author: PavelMikh
+      changes:
+        - insert:
+            tableName: clients
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: first_name
+                  value: Pavel
+              - column:
+                  name: last_name
+                  value: Mikhaylov
+              - column:
+                  name: patronymic
+                  value: Dmitrievich
+              - column:
+                  name: birthday
+                  value: 2001-10-26
+        - insert:
+            tableName: clients
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: first_name
+                  value: Ivan
+              - column:
+                  name: last_name
+                  value: Ivanov
+              - column:
+                  name: patronymic
+                  value: Ivanovich
+              - column:
+                  name: birthday
+                  value: 2010-01-16

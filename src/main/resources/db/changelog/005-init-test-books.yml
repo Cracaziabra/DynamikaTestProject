@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 005-init-test-books
+      author: PavelMikh
+      changes:
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: book_name
+                  value: TestBook
+              - column:
+                  name: author
+                  value: TestAuthor
+              - column:
+                  name: isbn
+                  value: 123456789123
+        - insert:
+            tableName: books
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: book_name
+                  value: War and Peace
+              - column:
+                  name: author
+                  value: Lev Tolstoy
+              - column:
+                  name: isbn
+                  value: 777777777777

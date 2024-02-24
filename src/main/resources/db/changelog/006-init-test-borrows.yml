@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 006-init-test-borrows
+      author: PavelMikh
+      changes:
+        - insert:
+            tableName: borrows
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: book_id
+                  value: 1
+              - column:
+                  name: client_id
+                  value: 2
+              - column:
+                  name: start_time
+                  value: 2024-01-11
+        - insert:
+            tableName: borrows
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: book_id
+                  value: 2
+              - column:
+                  name: client_id
+                  value: 1
+              - column:
+                  name: start_time
+                  value: 2023-10-19

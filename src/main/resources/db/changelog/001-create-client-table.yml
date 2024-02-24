@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-client-table
+      author: MikhPavel
+      changes:
+        - createTable:
+            tableName: clients
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(255)
+              - column:
+                  name: patronymic
+                  type: varchar(255)
+              - column:
+                  name: birthday
+                  type: date

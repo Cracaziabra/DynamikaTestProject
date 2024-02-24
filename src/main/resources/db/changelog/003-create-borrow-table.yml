@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-create-borrow-table
+      author: PavelMikh
+      changes:
+        - createTable:
+            tableName: borrows
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: book_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: book_id
+                    referencedTableName: books
+                    referencedColumnNames: id
+              - column:
+                  name: client_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: client_id
+                    referencedTableName: clients
+                    referencedColumnNames: id
+              - column:
+                  name: start_time
+                  type: date
+                  constraints:
+                    nullable: false
