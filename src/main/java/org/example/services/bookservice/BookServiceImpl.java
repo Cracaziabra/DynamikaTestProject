@@ -2,9 +2,7 @@ package org.example.services.bookservice;
 
 import lombok.RequiredArgsConstructor;
 import org.example.core.Book;
-import org.example.dtos.BookDto;
 import org.example.exceptions.BookNotFoundException;
-import org.example.mappers.BookMapper;
 import org.example.repositories.BookRepository;
 import org.springframework.stereotype.Service;
 

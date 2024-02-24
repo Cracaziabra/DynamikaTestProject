@@ -6,7 +6,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
-import org.example.dtos.BookDto;
 import org.example.dtos.BorrowDto;
 import org.example.dtos.CreateBorrowDto;
 import org.example.dtos.ExceptionDto;

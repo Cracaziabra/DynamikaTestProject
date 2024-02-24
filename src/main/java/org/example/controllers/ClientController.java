@@ -7,7 +7,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.example.core.Client;
-import org.example.dtos.BorrowDto;
 import org.example.dtos.ClientDto;
 import org.example.dtos.CreateClientDto;
 import org.example.dtos.ExceptionDto;

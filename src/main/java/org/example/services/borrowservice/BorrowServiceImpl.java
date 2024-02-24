@@ -7,7 +7,6 @@ import org.example.exceptions.BookAlreadyBorrowedException;
 import org.example.exceptions.BookWasntBorrowedException;
 import org.example.mappers.BorrowMapper;
 import org.example.repositories.BorrowRepository;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
