@@ -7,4 +7,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BorrowRepository extends JpaRepository<Borrow, Long> {
 
+    boolean existsByBookIdAndClientId(long bookId, long clientId);
+
+    Long deleteByBookIdAndClientId(long bookId, long clientId);
+
 }

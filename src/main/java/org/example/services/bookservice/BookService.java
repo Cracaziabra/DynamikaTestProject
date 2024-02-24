@@ -11,4 +11,5 @@ public interface BookService {
 
     Book addBook(Book book);
 
+    Book updateBook(Book book, long id);
 }
