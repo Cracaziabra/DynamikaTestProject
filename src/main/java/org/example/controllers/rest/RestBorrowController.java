@@ -1,4 +1,4 @@
-package org.example.controllers;
+package org.example.controllers.rest;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -20,9 +20,9 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/borrows")
+@RequestMapping("/rest-borrows")
 @RequiredArgsConstructor
-public class BorrowController {
+public class RestBorrowController {
 
     private final BorrowService borrowService;
     private final BorrowMapper borrowMapper;

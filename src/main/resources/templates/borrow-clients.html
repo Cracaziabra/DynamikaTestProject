@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Clients</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+<div class="center">
+  <a class="element" th:each="client: ${clients}" th:href="@{'/borrow/' + ${client.getId()} + '/books'}">
+    <div class="labeled">
+      <label>Имя:</label>
+      <p th:text="${client.getFirstName()}"></p>
+    </div>
+    <div class="labeled">
+      <label>Фамилия:</label>
+      <p th:text="${client.getLastName()}"></p>
+    </div>
+    <div class="labeled">
+      <label>Отчество:</label>
+      <p th:text="${client.getPatronymic()}"></p>
+    </div>
+    <div class="labeled">
+      <label>Дата рождения:</label>
+      <p th:text="${client.getBirthday()}"></p>
+    </div>
+  </a>
+</div>
+</body>
+</html>

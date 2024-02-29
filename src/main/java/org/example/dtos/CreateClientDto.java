@@ -1,6 +1,7 @@
 package org.example.dtos;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -14,6 +15,7 @@ public class CreateClientDto {
     private String firstName;
     private String lastName;
     private String patronymic;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthday;
 
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Change or add Book</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+<div class="center">
+    <div class="element">
+        <form method="POST" th:action="@{/books/change}" th:object="${selectedBook}">
+            <input type="hidden" th:field="*{id}"/>
+            <div class="labeled">
+                <label>Название:</label>
+                <input type="text" th:field="*{name}">
+            </div>
+            <div class="labeled">
+                <label>Автор:</label>
+                <input type="text" th:field="*{author}">
+            </div>
+            <div class="labeled">
+                <label>Номер ISBN:</label>
+                <input type="text" th:field="*{isbn}">
+            </div>
+            <input class="button" type="submit" value="Сохранить"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+<div class="center">
+    <a class="element" th:each="book: ${books}" th:href="@{'/books/' + ${book.getId()}}">
+        <div class="labeled">
+            <label>Название:</label>
+            <p th:text="${book.getName()}"></p>
+        </div>
+        <div class="labeled">
+            <label>Автор:</label>
+            <p th:text="${book.getAuthor()}"></p>
+        </div>
+        <div class="labeled">
+            <label>Номер ISBN:</label>
+            <p th:text="${book.getIsbn()}"></p>
+        </div>
+    </a>
+</div>
+</body>
+</html>

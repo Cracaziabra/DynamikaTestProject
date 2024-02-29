@@ -1,4 +1,4 @@
-package org.example.controllers;
+package org.example.controllers.rest;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -20,9 +20,9 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/clients")
+@RequestMapping("/rest-clients")
 @RequiredArgsConstructor
-public class ClientController {
+public class RestClientController {
 
     private final ClientService clientService;
     private final ClientMapper clientMapper;

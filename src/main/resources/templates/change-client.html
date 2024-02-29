@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Change or add Client</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+<div class="center">
+    <div class="element">
+        <form method="POST" th:action="@{/clients/change}" th:object="${selectedClient}">
+            <input type="hidden" th:field="*{id}"/>
+            <div class="labeled">
+                <label>Имя:</label>
+                <input type="text" th:field="*{firstName}">
+            </div>
+            <div class="labeled">
+                <label>Фамилия:</label>
+                <input type="text" th:field="*{lastName}">
+            </div>
+            <div class="labeled">
+                <label>Отчество:</label>
+                <input type="text" th:field="*{patronymic}">
+            </div>
+            <div class="labeled">
+                <label>Дата рождения:</label>
+                <input type="date" th:field="*{birthday}">
+            </div>
+            <input class="button" type="submit" value="Сохранить"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>

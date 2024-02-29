@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+<div class="center">
+    <a class="button" th:href="@{/books}">Список книг</a>
+    <a class="button" th:href="@{/clients}">Список клиентов</a>
+    <a class="button" th:href="@{/rest-borrows/info}">Список взятых книг</a>
+    <a class="button" th:href="@{/books/add}">Добавить книгу</a>
+    <a class="button" th:href="@{/clients/add}">Добавить клиента</a>
+    <a class="button" th:href="@{/borrow/clients}">Взять книгу на прочтение</a>
+</div>
+</body>
+</html>
